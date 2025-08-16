@@ -1,6 +1,6 @@
 from fastapi import Form
 
-async def register_user(email: str, password: str) -> dict :
+async def register_user(name:str, email: str, password: str) -> dict :
     # Here you would typically handle the registration logic,
 
     
