@@ -1,2 +1,14 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.pdb
+*.pkl
+
+# Virtual environment
 .venv/
+env/
+venv/
+
 settings.py
