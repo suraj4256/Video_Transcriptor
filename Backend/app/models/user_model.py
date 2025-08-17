@@ -1,16 +1,13 @@
-from sqlmodel import Field, SQLModel
-from typing import Optional, List, Annotated
+from bson import ObjectId
+from schematics.models import Model
+from datetime import datetime
+from schematics.types import StringType, DateTimeType, EmailType, IntType
 
-class User(SQLModel, table=True):
-    __tablename__ = "users"
-    
-    id: Optional[int] = Field(default=None, primary_key=True)
-    username: str = Field(index=True, unique=True, nullable=False)
-    email: str = Field(index=True, unique=True, nullable=False)
-    password: str = Field(nullable=False)
-    is_active: bool = Field(default=True)
-
-
-
-
+class User(Model):
+    id = ObjectId()
+    name = StringType(required=True)
+    email = EmailType(required=True)
+    password = StringType(required=True)
+    age = int 
+    created_at = DateTimeType(default=datetime.utcnow)
 
