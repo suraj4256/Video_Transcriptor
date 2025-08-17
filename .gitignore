@@ -10,5 +10,4 @@ __pycache__/
 .venv/
 env/
 venv/
-
 settings.py
